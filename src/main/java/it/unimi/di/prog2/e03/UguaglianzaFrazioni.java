@@ -21,6 +21,8 @@ along with this file.  If not, see <https://www.gnu.org/licenses/>.
 
 package it.unimi.di.prog2.e03;
 
+import java.util.Scanner;
+
 /** Classe per la verifica dell'uguaglianza tra frazioni. */
 public class UguaglianzaFrazioni {
   /** Costruttore privato per impedire l'istanziazione. */
@@ -31,4 +33,19 @@ public class UguaglianzaFrazioni {
    * corrispondenti rispettivamente a numeratore e denominatore di due frazioni ed emetta nel flusso
    * d'uscita "uguali" se le frazioni sono uguali, oppure "diverse".
    */
+  /**
+   * @param args
+   */
+  public static void main(String[] args) {
+    int a = Integer.parseInt(args[0]);
+    int b = Integer.parseInt(args[1]);
+    int c = Integer.parseInt(args[2]);
+    int d = Integer.parseInt(args[3]);
+    if ((double) a / b == (double) c / d) {
+      System.out.println("uguali");
+    } else {
+      System.out.println("diverse");
+    }
+    
+  }
 }
