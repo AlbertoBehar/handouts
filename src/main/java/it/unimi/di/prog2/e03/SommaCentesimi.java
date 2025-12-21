@@ -21,15 +21,29 @@ along with this file.  If not, see <https://www.gnu.org/licenses/>.
 
 package it.unimi.di.prog2.e03;
 
+import java.util.Scanner;
+
 /** Classe per la somma di importi in centesimi. */
 public class SommaCentesimi {
 
   /** Costruttore privato per impedire l'istanziazione. */
   private SommaCentesimi() {}
 
-  /*
-   * Scrivere il metodo main che legga dal flusso di ingresso un elenco di importi in euro e
-   * centesimi (uno per riga, con la parte decimale separata dalla parte intera da un punto) e ne
-   * emetta nel flusso d'uscita la somma.
+  /**
+   * Legge dal flusso di ingresso un elenco di importi in euro e centesimi (uno per riga, con la
+   * parte decimale separata dalla parte intera da un punto) e ne emette nel flusso d'uscita la
+   * somma.
+   *
+   * @param args gli argomenti della riga di comando
    */
+  public static void main(String[] args) {
+    double total = 0;
+    try (Scanner sc = new Scanner(System.in)) {
+      while (sc.hasNextDouble()) {
+        total += sc.nextDouble();
+      }
+      System.out.println(total);
+    }
+  }
+  
 }
